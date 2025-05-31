@@ -1,0 +1,40 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.color-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color1 {
+    background-color: #a7d1eb; /* A lovely light blue in hexadecimal */
+}
+
+.color2 {
+    background-color: rgb(255, 165, 0); /* A bright orange in RGB */
+}
+
+.color3 {
+    background-color: mediumseagreen; /* A calming green using a predefined name */
+}
+
+.color4 {
+    background-color: hsl(300, 70%, 60%); /* A vibrant magenta in HSL */
+}
+
+.color5 {
+    background-color: peachpuff; /* Another pleasing predefined color */
+}

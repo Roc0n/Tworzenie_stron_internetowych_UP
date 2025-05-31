@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#email {
+    padding: 50px;
+    margin-top: 50px;
+    width: 500px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+}
+
+#confidential, #top-secret {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: 2px dashed red;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+}
+
+#confidential {
+    top: 10px;
+    left: 10px;
+    transform: rotate(-15deg);
+}
+
+#top-secret {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(15deg);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.blurred {
+    filter: blur(3px);
+    background-color: #ccc; /* To make blurred text slightly visible */
+    color: transparent; /* Hide the original text color */
+    padding: 0 5px; /* Add some padding around the blurred text */
+}

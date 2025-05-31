@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="Job_Application_Form_styles.css">
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Join Our Stellar Team!</h1>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="position">Desired Position:</label>
+            <select id="position" name="position" required>
+                <option value="" disabled selected>Select a Position</option>
+                <option value="frontend">Front-End Developer</option>
+                <option value="backend">Back-End Developer</option>
+                <option value="designer">UI/UX Designer</option>
+                <option value="marketing">Marketing Specialist</option>
+            </select>
+
+            <fieldset class="radio-group">
+                <legend>Availability:</legend>
+                <div>
+                    <input type="radio" id="full-time" name="availability" value="full-time">
+                    <label for="full-time">Full-Time</label>
+                </div>
+                <div>
+                    <input type="radio" id="part-time" name="availability" value="part-time">
+                    <label for="part-time">Part-Time</label>
+                </div>
+            </fieldset>
+
+            <label for="message">Why are you a great fit?</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
