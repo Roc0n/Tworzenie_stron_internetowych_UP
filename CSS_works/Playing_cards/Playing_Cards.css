@@ -1,40 +1,81 @@
+/* =============================================================================
+   PLAYING CARDS CONTAINER
+   -----------------------------------------------------------------------------
+   #playing-cards to główny kontener, w którym umieszczone są karty do gry.
+   - Używa flexboxa, aby ułożyć karty w rzędzie oraz umożliwić ich zawijanie,
+   - Ustala odstępy między kartami oraz padding wewnątrz kontenera.
+   - Tło kontenera jest ustawione, aby było łatwiej zobaczyć obszar, w którym 
+     znajdują się karty.
+============================================================================= */
 #playing-cards {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    background-color: #f0f0f0; /* Just to visualize the container */
+    justify-content: center;   /* Wyśrodkowuje karty w poziomie */
+    flex-wrap: wrap;           /* Umożliwia zawijanie kart do nowych rzędów */
+    gap: 20px;                /* Odstęp między kartami */
+    padding: 20px;            /* Wewnętrzny margines kontenera */
+    background-color: #f0f0f0;  /* Jasnoszare tło (do wizualizacji obszaru) */
 }
 
+/* =============================================================================
+   CARD COMPONENT
+   -----------------------------------------------------------------------------
+   .card reprezentuje pojedynczą kartę do gry.
+   - Ustalona szerokość i wysokość zapewniają jednolity rozmiar kart.
+   - Użycie flexboxa z właściwością flex-direction: column pozwala ułożyć
+     elementy karty ("left", "middle" i "right") jeden pod drugim.
+   - Stylizacja zawiera obramowanie, zaokrąglone rogi, padding i cień.
+============================================================================= */
 .card {
     display: flex;
-    justify-content: space-between;
-    width: 150px;
-    height: 200px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 2em;
-    flex-direction: column; /* To stack left, middle, right initially */
+    justify-content: space-between; /* Rozmieszcza elementy równomiernie w pionie */
+    width: 150px;                /* Szerokość karty */
+    height: 200px;               /* Wysokość karty */
+    border: 1px solid #ccc;      /* Delikatne, jasnoszare obramowanie */
+    border-radius: 10px;         /* Zaokrąglone rogi */
+    padding: 10px;               /* Wewnętrzny odstęp w karcie */
+    background-color: white;     /* Białe tło karty */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Lekki cień dla efektu głębi */
+    font-size: 2em;              /* Bazowy rozmiar czcionki dla zawartości karty */
+    flex-direction: column;      /* Ustawienie elementów karty w kolumnie */
 }
 
+/* =============================================================================
+   POZYCJONOWANIE SYMBOLI KARTY
+   -----------------------------------------------------------------------------
+   Klasy .left, .middle oraz .right służą do pozycjonowania symboli karty
+   w różnych częściach karty:
+   - .left: umieszczany w lewym górnym rogu,
+   - .middle: umieszczany centralnie,
+   - .right: umieszczany w prawym dolnym rogu, dodatkowo obracany o 180°.
+============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   .left: Umieszcza symbol w górnym lewym rogu karty.
+----------------------------------------------------------------------------- */
 .left {
-    align-self: flex-start;
+    align-self: flex-start;   /* Ustawia element na początku osi głównej */
 }
 
+/* -----------------------------------------------------------------------------
+   .middle: Centrum karty, gdzie symbol jest wyśrodkowany.
+   - Używa flexboxa, aby komponent w środku był wyśrodkowany zarówno 
+     pionowo jak i poziomo.
+   - Zwiększona czcionka podkreśla znaczenie centralnego symbolu.
+----------------------------------------------------------------------------- */
 .middle {
-    align-self: center;
+    align-self: center;        /* Wyśrodkowanie w poziomie w obrębie kontenera */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the suit vertically */
-    align-items: center; /* Center the suit horizontally */
-    font-size: 3em;
+    justify-content: center;   /* Wyśrodkowanie w pionie */
+    align-items: center;       /* Wyśrodkowanie w poziomie wewnątrz elementu */
+    font-size: 3em;            /* Większy rozmiar czcionki dla centralnego symbolu */
 }
 
+/* -----------------------------------------------------------------------------
+   .right: Umieszcza symbol w dolnym prawym rogu karty,
+   - Obraca symbol o 180 stopni, tworząc efekt odwrócenia.
+----------------------------------------------------------------------------- */
 .right {
-    align-self: flex-end;
-    transform: rotate(180deg); /* Flip the right suit upside down */
+    align-self: flex-end;      /* Ustawia element na końcu osi głównej (prawo) */
+    transform: rotate(180deg); /* Obraca element o 180° (odwraca symbol) */
 }

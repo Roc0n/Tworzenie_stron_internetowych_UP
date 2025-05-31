@@ -1,3 +1,4 @@
+/* Ukrywanie elementów wizualnie – pozostają dostępne dla czytników ekranu */
 span[class~="sr-only"] {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -11,41 +12,53 @@ span[class~="sr-only"] {
   margin: -1px !important;
 }
 
+/* Ustawienie modelu pudełkowego dla całego dokumentu – rozmiary elementów liczone są włącznie z paddingiem i borderem */
 html {
   box-sizing: border-box;
 }
 
+/* Podstawowe style dla strony – czcionka i kolor tekstu */
 body {
   font-family: sans-serif;
   color: #0a0a23;
 }
 
+/* Stylizacja nagłówka (h1) – ograniczenie szerokości, centrowanie oraz dodanie odstępów (padding) */
 h1 {
   max-width: 37.25rem;
   margin: 0 auto;
   padding: 1.5rem 1.25rem;
 }
 
+/* Ustawienie flexbox w nagłówku dla elementu z klasą .flex.
+   Elementy są ułożone w odwrotnej kolejności (column-reverse) i oddzielone odstępem (gap). */
 h1 .flex {
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
 }
 
+/* Ustawienie mniejszej czcionki dla pierwszego elementu span wewnątrz flexboxa */
 h1 .flex span:first-of-type {
   font-size: 0.7em;
 }
 
+/* Ustawienie większej czcionki dla ostatniego elementu span (zwykle tytuł) */
 h1 .flex span:last-of-type {
   font-size: 1.2em;
 }
 
+/* Stylizacja głównej sekcji strony – ograniczenie szerokości, centrowanie oraz obramowanie */
 section {
   max-width: 40rem;
   margin: 0 auto;
   border: 2px solid #d0d0d5;
 }
 
+/* Pasek z latami (#years):
+   - Wyświetlany jako flexbox, wyrównany do prawej
+   - Pozycja sticky powoduje, że pasek pozostaje na górze podczas przewijania
+   - Ciemne tło i jasny tekst zwiększają czytelność */
 #years {
   display: flex;
   justify-content: flex-end;
@@ -58,16 +71,21 @@ section {
   margin: 0 -2px;
 }
 
+/* Stylizacja elementów span wewnątrz #years – szerokość, pogrubienie i wyrównanie tekstu do prawej */
 #years span[class] {
   font-weight: bold;
   width: 4.5rem;
   text-align: right;
 }
 
+/* Opakowanie dla tabel – dodaje padding, aby tabela nie przylegała do krawędzi sekcji */
 .table-wrap {
   padding: 0 0.75rem 1.5rem 0.75rem;
 }
 
+/* Stylizacja tabel:
+   - border-collapse usuwa dodatkowe odstępy między komórkami
+   - tabela zajmuje 100% szerokości, a dzięki position: relative można precyzyjnie umieszczać elementy, np. caption */
 table {
   border-collapse: collapse;
   border: 0;
@@ -76,6 +94,8 @@ table {
   margin-top: 3rem;
 }
 
+/* Stylizacja podpisu tabeli (caption):
+   - Ustawia kolor, rozmiar czcionki oraz pozycję absolutną, by umieścić napis poza przepływem dokumentu */
 table caption {
   color: #356eaf;
   font-size: 1.3em;
@@ -85,53 +105,69 @@ table caption {
   left: 0.5rem;
 }
 
+/* Stylizacja komórek danych (td) w tabeli:
+   - Ustala szerokość komórek na 4rem (z minimalną i maksymalną szerokością) */
 tbody td {
   width: 100vw;
   min-width: 4rem;
   max-width: 4rem;
 }
 
+/* Stylizacja komórek nagłówkowych (th) w tabeli:
+   - Szerokość obliczana jest jako reszta dostępnej przestrzeni (100% minus 12rem) */
 tbody th {
   width: calc(100% - 12rem);
 }
 
+/* Wiersze podsumowujące (total):
+   - Pogrubienie tekstu oraz dolna ramka (podwójna linia) służą do wyróżnienia podsumowań */
 tr[class="total"] {
   border-bottom: 4px double #0a0a23;
   font-weight: bold;
 }
 
+/* Stylizacja nagłówków (th) w wierszach podsumowujących – wyrównanie do lewej i padding */
 tr[class="total"] th {
   text-align: left;
   padding: 0.5rem 0 0.25rem 0.5rem;
 }
 
+/* Stylizacja komórek danych (td) w wierszach podsumowujących – wyrównanie do prawej oraz padding */
 tr.total td {
   text-align: right;
   padding: 0 0.25rem;
 }
 
+/* Dodatkowy padding po prawej stronie dla trzeciej komórki w wierszach podsumowujących */
 tr.total td:nth-of-type(3) {
   padding-right: 0.5rem;
 }
 
+/* Efekt hover na wierszach podsumowujących – zmiana tła podczas najechania kursorem */
 tr.total:hover {
   background-color: #99c9ff;
 }
 
+/* Wyróżnienie komórek danych oznaczonych klasą "current" za pomocą kursywy */
 td.current {
   font-style: italic;
 }
 
+/* Stylizacja wierszy z danymi (tr.data):
+   - Użycie gradientu dodaje subtelny efekt prążkowania, co poprawia czytelność tabeli */
 tr.data {
   background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
 }
 
+/* Stylizacja komórek nagłówkowych (th) w wierszach danych – wyrównanie do lewej oraz padding */
 tr.data th {
   text-align: left;
   padding-top: 0.3rem;
   padding-left: 0.5rem;
 }
 
+/* Stylizacja opisu (description) w nagłówkach wierszy danych:
+   - Wyświetlany jako blok, kursywą oraz z ujemnym marginesem dla lepszego dopasowania wizualnego */
 tr.data th .description {
   display: block;
   font-weight: normal;
@@ -140,12 +176,15 @@ tr.data th .description {
   margin-right: -13.5rem;
 }
 
+/* Stylizacja komórek danych (td) w wierszach danych:
+   - Ustawienie wyrównania pionowego do góry, paddingu i wyrównania tekstu do prawej */
 tr.data td {
   vertical-align: top;
   padding: 0.3rem 0.25rem 0;
   text-align: right;
 }
 
+/* Dodatkowy padding dla ostatniej komórki danych w wierszach */
 tr.data td:last-child {
   padding-right: 0.5rem;
 }

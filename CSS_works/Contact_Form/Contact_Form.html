@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+         =======================================
+         Sekcja HEAD
+         - Deklaracja kodowania znaków UTF-8
+         - Ustawienie viewportu dla responsywności
+         - Tytuł strony (wyświetlany w zakładce przeglądarki)
+         - Łączenie z zewnętrznym arkuszem stylów (Contact_Form.css)
+         =======================================
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get In Touch</title>
     <link rel="stylesheet" href="Contact_Form.css">
 </head>
 <body>
+    <!--
+         =======================================
+         Główna zawartość strony
+         - Kontener formularza kontaktowego
+         =======================================
+    -->
     <div class="form-container">
+        <!--
+             Formularz kontaktowy, który:
+             - Wysyła dane metodą POST
+             - Zawiera pola: imię, email oraz wiadomość
+             - Ma tytuł zachęcający do kontaktu ("Let's Connect")
+        -->
         <form action="#" method="POST">
             <h2>Let's Connect</h2>
+            <!--
+                 Grupa formularza: Pole dla wpisania imienia użytkownika
+            -->
             <div class="form-group">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
+            <!--
+                 Grupa formularza: Pole dla wpisania adresu email
+            -->
             <div class="form-group">
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
+            <!--
+                 Grupa formularza: Pole na wiadomość
+            -->
             <div class="form-group">
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
+            <!--
+                 Przycisk wysyłki formularza
+            -->
             <button type="submit">Send Message</button>
         </form>
     </div>

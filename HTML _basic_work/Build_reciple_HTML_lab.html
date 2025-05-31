@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ================================================================
+         META INFORMACJE I KONFIGURACJA STRONY
+         ----------------------------------------------------------------
+         - Deklaracja dokumentu HTML5.
+         - Ustawienie języka strony na angielski.
+         - Kodowanie znaków UTF-8 zapewniające poprawne wyświetlanie treści.
+         - Meta viewport umożliwia responsywność na różnych ekranach.
+         - Tytuł strony widoczny na karcie przeglądarki.
+         ================================================================ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hearty Lentil Soup</title>
     <style>
+        /* ================================================================
+           STYLOWANIE STRONY
+           ---------------------------------------------------------------
+           - Definicja czcionki dla całej strony.
+           - Ustawienie kolorów tła oraz tekstu.
+           - Formatowanie nagłówków i list składników/instrukcji.
+           ================================================================ */
         body {
             font-family: sans-serif;
             line-height: 1.6;
@@ -12,29 +28,37 @@
             background-color: #f4f4f4;
             color: #333;
         }
+
         h1, h2 {
-            color: #558B2F; /* A nice olive green */
+            color: #558B2F; /* Oliwkowy zielony */
         }
+
         .intro {
             font-style: italic;
             color: #777;
         }
+
+        /* Stylizacja listy składników */
         .ingredients-list {
             list-style-type: disc;
             padding-left: 20px;
-            background-color: #e0f2f7; /* Light cyan background for ingredients */
+            background-color: #e0f2f7; /* Jasny cyjan */
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 15px;
         }
+
+        /* Stylizacja listy instrukcji */
         .instructions-list {
             list-style-type: decimal;
             padding-left: 20px;
-            background-color: #fffde7; /* Light yellow background for instructions */
+            background-color: #fffde7; /* Jasny żółty */
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 15px;
         }
+
+        /* Formatowanie obrazków */
         img {
             max-width: 100%;
             height: auto;
@@ -45,12 +69,23 @@
     </style>
 </head>
 <body>
+    <!-- ================================================================
+         NAGŁÓWEK STRONY
+         ----------------------------------------------------------------
+         - Tytuł dania oraz krótki wstęp do przepisu.
+         ================================================================ -->
     <h1>Hearty Lentil Soup</h1>
     <p class="intro">A comforting and nutritious soup, perfect for a chilly evening. This recipe is simple to follow and packed with flavor.</p>
 
+    <!-- Zdjęcie gotowego dania -->
     <img src="https://cdn.freecodecamp.org/curriculum/labs/recipe.jpg" alt="A steaming bowl of lentil soup garnished with herbs.">
 
-    <h2>Ingredients for the ingredients section</h2>
+    <!-- ================================================================
+         SEKCJA SKŁADNIKÓW
+         ----------------------------------------------------------------
+         - Lista składników niezbędnych do przygotowania zupy.
+         ================================================================ -->
+    <h2>Ingredients</h2>
     <ul class="ingredients-list">
         <li>1 tablespoon olive oil</li>
         <li>1 large onion, chopped</li>
@@ -63,7 +98,12 @@
         <li>Fresh parsley, chopped (for garnish)</li>
     </ul>
 
-    <h2>Instructions for the instructions section</h2>
+    <!-- ================================================================
+         SEKCJA INSTRUKCJI
+         ----------------------------------------------------------------
+         - Lista kroków opisujących sposób przygotowania zupy.
+         ================================================================ -->
+    <h2>Instructions</h2>
     <ol class="instructions-list">
         <li>Heat the olive oil in a large pot over medium heat.</li>
         <li>Add the chopped onion and cook until softened, about 5 minutes.</li>

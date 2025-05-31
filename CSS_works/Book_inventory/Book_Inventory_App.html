@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <!-- Deklaracja typu dokumentu oraz ustawienie języka na polski -->
     <meta charset="UTF-8">
+    <!-- Ustawienie viewportu, aby strona była responsywna i dobrze wyświetlała się na urządzeniach mobilnych -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tytuł strony wyświetlany na karcie przeglądarki -->
     <title>Book Inventory</title>
+    <!-- Łączenie z zewnętrznym arkuszem stylów CSS, który odpowiada za wygląd aplikacji -->
     <link rel="stylesheet" href="Book_Inventory_App.css">
 </head>
 <body>
 
+    <!-- Nagłówek strony informujący, że mamy do czynienia z inwentarzem książek -->
     <h1>Book Inventory</h1>
 
+    <!-- Tabela prezentująca listę książek wraz z danymi o tytule, autorze, kategorii, statusie i ocenie -->
     <table>
+        <!-- Sekcja nagłówka tabeli: definiuje tytuły kolumn -->
         <thead>
             <tr>
                 <th>Title</th>
@@ -20,26 +27,37 @@
                 <th>Rate</th>
             </tr>
         </thead>
+        <!-- Sekcja ciała tabeli: zawiera wiersze z danymi o poszczególnych książkach -->
         <tbody>
+            <!-- Wiersz opisujący książkę "1984" autorstwa George'a Orwella -->
+            <!-- Klasa "read" oznacza, że książka została już przeczytana -->
             <tr class="read">
                 <td>1984</td>
                 <td>George Orwell</td>
                 <td>Dystopian</td>
+                <!-- Status książki przedstawiony jest za pomocą elementu span z odpowiednią klasą -->
                 <td><span class="status">Read</span></td>
+                <!-- Ocena książki - przedstawiona jako trzy gwiazdki. Wewnętrzne spany służą do oznaczenia poszczególnych "gwiazdek" -->
                 <td><span class="rate three"><span></span><span></span><span></span></span></td>
             </tr>
+            <!-- Wiersz opisujący książkę "The Great Gatsby" autorstwa F. Scotta Fitzgeralda -->
+            <!-- Klasa "to-read" wskazuje, że książka jest na liście do przeczytania -->
             <tr class="to-read">
                 <td>The Great Gatsby</td>
                 <td>F. Scott Fitzgerald</td>
                 <td>Classic</td>
                 <td><span class="status">To Read</span></td>
+                <!-- Ocena książki - przedstawiona jako dwie gwiazdki -->
                 <td><span class="rate two"><span></span><span></span><span></span></span></td>
             </tr>
+            <!-- Wiersz opisujący książkę "The Hobbit" autorstwa J.R.R. Tolkiena -->
+            <!-- Klasa "in-progress" oznacza, że książka jest obecnie w trakcie czytania -->
             <tr class="in-progress">
                 <td>The Hobbit</td>
                 <td>J.R.R. Tolkien</td>
                 <td>Fantasy</td>
                 <td><span class="status">In Progress</span></td>
+                <!-- Ocena książki - przedstawiona jako jedna gwiazdka -->
                 <td><span class="rate one"><span></span><span></span><span></span></span></td>
             </tr>
         </tbody>

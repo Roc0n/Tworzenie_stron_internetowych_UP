@@ -1,3 +1,11 @@
+/* =============================================================================
+   GLOBALNE USTAWIENIA DLA BODY
+   -----------------------------------------------------------------------------
+   - Tło strony ustawione na jasnoszary (#f4f4f4), co zapewnia neutralne i estetyczne otoczenie.
+   - Flexbox używany do centrowania zawartości zarówno w pionie, jak i w poziomie.
+   - Minimalna wysokość ustawiona na 100vh, dzięki czemu zawartość zawsze będzie zajmować całą wysokość ekranu.
+   - Usunięcie domyślnych marginesów przeglądarki.
+============================================================================= */
 body {
     background-color: #f4f4f4;
     display: flex;
@@ -7,11 +15,24 @@ body {
     margin: 0;
 }
 
+/* =============================================================================
+   KONTAINER KOLOROWYCH BOXÓW (GRID)
+   -----------------------------------------------------------------------------
+   - Wyświetlanie w układzie flexbox, dzięki czemu boxy układają się w rzędzie.
+   - Odstęp między boxami wynosi 20px.
+============================================================================= */
 .color-grid {
     display: flex;
     gap: 20px;
 }
 
+/* =============================================================================
+   PODSTAWOWE STYLE DLA BOXÓW
+   -----------------------------------------------------------------------------
+   - Ustalona szerokość i wysokość (100px x 100px), co zapewnia jednolity wygląd.
+   - Zaokrąglone rogi (8px) dla łagodniejszego kształtu.
+   - Lekki cień, który dodaje efektu głębi.
+============================================================================= */
 .color-box {
     width: 100px;
     height: 100px;
@@ -19,22 +40,37 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* =============================================================================
+   INDYWIDUALNE STYLE DLA KOLORÓW
+   -----------------------------------------------------------------------------
+   - Każdy box otrzymuje inny kolor za pomocą różnych formatów kodowania kolorów:
+     - HEX (#a7d1eb)
+     - RGB (rgb(255, 165, 0))
+     - Nazwa koloru (mediumseagreen, peachpuff)
+     - HSL (hsl(300, 70%, 60%))
+============================================================================= */
+
+/* Jasny błękit w formacie HEX */
 .color1 {
-    background-color: #a7d1eb; /* A lovely light blue in hexadecimal */
+    background-color: #a7d1eb; /* Subtelny odcień niebieskiego */
 }
 
+/* Intensywny pomarańczowy w RGB */
 .color2 {
-    background-color: rgb(255, 165, 0); /* A bright orange in RGB */
+    background-color: rgb(255, 165, 0); /* Jasny, żywy odcień pomarańczy */
 }
 
+/* Kojący zielony w nazwie CSS */
 .color3 {
-    background-color: mediumseagreen; /* A calming green using a predefined name */
+    background-color: mediumseagreen; /* Harmonijny zielony */
 }
 
+/* Magenta w HSL */
 .color4 {
-    background-color: hsl(300, 70%, 60%); /* A vibrant magenta in HSL */
+    background-color: hsl(300, 70%, 60%); /* Intensywny fioletowy odcień */
 }
 
+/* Ciepły odcień brzoskwiniowy */
 .color5 {
-    background-color: peachpuff; /* Another pleasing predefined color */
+    background-color: peachpuff; /* Miękki i przyjemny pastelowy kolor */
 }

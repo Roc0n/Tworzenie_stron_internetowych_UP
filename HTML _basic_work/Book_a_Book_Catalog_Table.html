@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ================================================================
+         META INFORMACJE I KONFIGURACJA STRONY
+         ----------------------------------------------------------------
+         - Deklaracja dokumentu HTML5.
+         - Ustawienie języka strony na angielski.
+         - Kodowanie znaków UTF-8 zapewnia poprawne wyświetlanie treści.
+         - Tytuł strony widoczny na karcie przeglądarki.
+         ================================================================ -->
     <meta charset="UTF-8">
     <title>Book Catalog</title>
 </head>
 <body>
+    <!-- ================================================================
+         TABELA KATALOGU KSIĄŻEK
+         ----------------------------------------------------------------
+         - Struktura tabeli zawierająca listę książek wraz z ich autorami,
+           gatunkami oraz rokiem publikacji.
+         ================================================================ -->
     <table>
+        <!-- ================================================================
+             NAGŁÓWEK TABELI (THEAD)
+             ----------------------------------------------------------------
+             - Określa główne kategorie kolumn: Tytuł, Autor, Gatunek, Rok publikacji.
+             ================================================================ -->
         <thead>
             <tr>
                 <th>Title</th>
@@ -14,6 +33,12 @@
                 <th>Publication Year</th>
             </tr>
         </thead>
+
+        <!-- ================================================================
+             TREŚĆ TABELI (TBODY)
+             ----------------------------------------------------------------
+             - Zawiera listę książek z ich szczegółami.
+             ================================================================ -->
         <tbody>
             <tr>
                 <td>The Great Gatsby</td>
@@ -46,6 +71,13 @@
                 <td>1932</td>
             </tr>
         </tbody>
+
+        <!-- ================================================================
+             STOPKA TABELI (TFOOT)
+             ----------------------------------------------------------------
+             - Wyświetla podsumowanie tabeli z całkowitą liczbą książek.
+             - Użycie "colspan=4" pozwala na scalanie komórek w czterech kolumnach.
+             ================================================================ -->
         <tfoot>
             <tr>
                 <td colspan="4">Total Books: 5</td>

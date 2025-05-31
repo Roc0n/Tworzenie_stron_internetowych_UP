@@ -1,9 +1,24 @@
+/* =============================================================================
+   MEDIA QUERY: PŁYNNE PRZEWIJANIE
+   -----------------------------------------------------------------------------
+   Jeśli użytkownik nie preferuje ograniczenia ruchu (animacji),
+   strona stosuje płynne przewijanie.
+============================================================================= */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
 
+/* =============================================================================
+   GLOBALNE STYLE DLA BODY
+   -----------------------------------------------------------------------------
+   Ustawienia dla całej strony:
+   - Jasne tło dla lepszej czytelności
+   - Ciemniejszy tekst, aby kontrastował z tłem
+   - Czcionka bezszeryfowa dla nowoczesnego wyglądu
+   - Usunięcie domyślnych marginesów
+============================================================================= */
 body {
   background: #f5f6f7;
   color: #1b1b32;
@@ -11,6 +26,13 @@ body {
   margin: 0;
 }
 
+/* =============================================================================
+   NAGŁÓWEK STRONY (HEADER)
+   -----------------------------------------------------------------------------
+   - Nagłówek zajmuje całą szerokość strony
+   - Używa flexboxa, aby wyśrodkować elementy i zapewnić równomierne rozmieszczenie
+   - Ciemne tło dla wyróżnienia się na stronie
+============================================================================= */
 header {
   width: 100%;
   height: 50px;
@@ -20,6 +42,13 @@ header {
   align-items: center;
 }
 
+/* =============================================================================
+   LOGO
+   -----------------------------------------------------------------------------
+   - Logo dynamicznie zmienia swoją szerokość w zależności od ekranu
+   - Zachowuje proporcje dzięki aspect-ratio
+   - Ma własne tło dla lepszego kontrastu
+============================================================================= */
 #logo {
   width: max(10rem, 18vw);
   background-color: #0a0a23;
@@ -27,18 +56,37 @@ header {
   padding: 0.4rem;
 }
 
+/* =============================================================================
+   TYTUŁ STRONY (h1)
+   -----------------------------------------------------------------------------
+   - Żółty kolor wyróżniający tytuł
+   - Responsywny rozmiar czcionki, który dopasowuje się do szerokości ekranu
+   - Tekst wyśrodkowany
+============================================================================= */
 h1 {
   color: #f1be32;
   font-size: min(5vw, 1.2em);
   text-align: center;
 }
 
+/* =============================================================================
+   NAWIGACJA (NAV)
+   -----------------------------------------------------------------------------
+   - Nawigacja zajmuje połowę szerokości nagłówka
+   - Maksymalna szerokość ograniczona do 300px, aby była kompaktowa
+============================================================================= */
 nav {
   width: 50%;
   max-width: 300px;
   height: 50px;
 }
 
+/* =============================================================================
+   LISTA NAWIGACYJNA (UL)
+   -----------------------------------------------------------------------------
+   - Lista nawigacyjna wykorzystuje flexbox, aby wyrównać elementy poziomo
+   - Usuwa domyślne paddingy i marginesy
+============================================================================= */
 nav > ul {
   display: flex;
   justify-content: space-evenly;
@@ -49,6 +97,13 @@ nav > ul {
   height: 100%;
 }
 
+/* =============================================================================
+   ELEMENTY LISTY NAWIGACYJNEJ (LI)
+   -----------------------------------------------------------------------------
+   - Kolorystyka dostosowana do ciemnego tła nagłówka
+   - Lekki padding i margines dla lepszej czytelności
+   - Po najechaniu zmiana koloru tła i tekstu
+============================================================================= */
 nav > ul > li {
   color: #dfdfe2;
   margin: 0 0.2rem;
@@ -62,45 +117,93 @@ nav > ul > li:hover {
   cursor: pointer;
 }
 
+/* =============================================================================
+   LINKI W NAWIGACJI (A)
+   -----------------------------------------------------------------------------
+   - Linki dziedziczą kolor z elementu nadrzędnego (LI)
+   - Brak podkreślenia dla czystszego wyglądu
+============================================================================= */
 li > a {
   color: inherit;
   text-decoration: none;
 }
 
+/* =============================================================================
+   MAIN (GŁÓWNA TREŚĆ)
+   -----------------------------------------------------------------------------
+   - Dodaje odstęp od góry, aby zawartość nie nachodziła na nagłówek
+============================================================================= */
 main {
   padding-top: 50px;
 }
 
+/* =============================================================================
+   SEKCJE STRONY (SECTION)
+   -----------------------------------------------------------------------------
+   - Ogranicza szerokość sekcji do 80% ekranu
+   - Maksymalna szerokość to 600px dla lepszej czytelności
+============================================================================= */
 section {
   width: 80%;
   margin: 0 auto 10px auto;
   max-width: 600px;
 }
 
+/* =============================================================================
+   NAGŁÓWKI (H1, H2)
+   -----------------------------------------------------------------------------
+   - Zastosowanie czcionek Verdana i Tahoma dla lepszej czytelności
+============================================================================= */
 h1,
 h2 {
   font-family: Verdana, Tahoma;
 }
 
+/* =============================================================================
+   NAGŁÓWEK SEKCJI (H2)
+   -----------------------------------------------------------------------------
+   - Dolna linia dla wizualnego oddzielenia sekcji
+   - Górny padding dla przejrzystości
+============================================================================= */
 h2 {
   border-bottom: 4px solid #dfdfe2;
   margin-top: 0px;
   padding-top: 60px;
 }
 
+/* =============================================================================
+   FORMULARZE (INFO)
+   -----------------------------------------------------------------------------
+   - Dodaje padding do formularza
+============================================================================= */
 .info {
   padding: 10px 0 0 5px;
 }
 
+/* =============================================================================
+   STYLE FORMULARZA (FORMROW)
+   -----------------------------------------------------------------------------
+   - Ustawia margines oraz padding dla sekcji formularza
+============================================================================= */
 .formrow {
   margin-top: 30px;
   padding: 0px 15px;
 }
 
+/* =============================================================================
+   INPUTS (Pola Tekstowe)
+   -----------------------------------------------------------------------------
+   - Ustawia standardowy rozmiar czcionki dla pól formularza
+============================================================================= */
 input {
   font-size: 1rem;
 }
 
+/* =============================================================================
+   UKŁAD LABEL I INPUT W INFO
+   -----------------------------------------------------------------------------
+   - Ustawia elementy w jednej linii
+============================================================================= */
 .info label, .info input {
   display: inline-block;
 }
@@ -116,34 +219,11 @@ input {
   text-align: right;
 }
 
-.question-block {
-  text-align: left;
-  display: block;
-  width: 100%;
-  margin-top: 20px;
-  padding-top: 5px;
-}
-
-h3 {
-  margin-top: 5px;
-  padding-left: 15px;
-  font-size: 1.375rem;
-}
-
-h3::before {
-  content: "Question #";
-}
-
-.question {
-  border: none;
-  padding-bottom: 0;
-}
-
-.answers-list {
-  list-style: none;
-  padding: 0;
-}
-
+/* =============================================================================
+   STYLE PRZYCISKU
+   -----------------------------------------------------------------------------
+   - Przyciski wysyłania są wycentrowane, mają szerokość 40%, większy padding
+============================================================================= */
 button {
   display: block;
   margin: 40px auto;
@@ -154,6 +234,12 @@ button {
   border: 3px solid #3b3b4f;
 }
 
+/* =============================================================================
+   STOPKA (FOOTER)
+   -----------------------------------------------------------------------------
+   - Wyśrodkowana treść
+   - Ciemne tło dla estetycznego kontrastu
+============================================================================= */
 footer {
   background-color: #2a2a40;
   display: flex;
@@ -165,19 +251,12 @@ footer a {
   color: #dfdfe2;
 }
 
+/* =============================================================================
+   STYLE DLA ADRESU
+   -----------------------------------------------------------------------------
+   - Tekst jest wyśrodkowany dla lepszej estetyki
+============================================================================= */
 address {
   text-align: center;
   padding: 0.3em;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }

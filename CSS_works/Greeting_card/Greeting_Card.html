@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ===================================================
+         META INFORMACJE I USTAWIENIA
+         ---------------------------------------------------
+         - Kodowanie znaków: UTF-8 zapewnia prawidłowe
+           wyświetlanie wszystkich znaków.
+         - Ustawienia viewportu gwarantują responsywność.
+         - Tytuł strony wyświetlany w zakładce przeglądarki.
+         - Link do zewnętrznego arkusza stylów (Greeting_Card_styles.css).
+         =================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeting Card</title>
     <link href="Greeting_Card_styles.css" rel="stylesheet">
   </head>
   <body>
+    <!-- ===================================================
+         KARTA OKOLICZNOŚCIOWA
+         ---------------------------------------------------
+         Główna sekcja zawierająca treść kartki:
+         - Tytuł (np. "Happy Birthday!")
+         - Wiadomość (motto, życzenia)
+         - Linki do akcji: wysłania oraz udostępnienia kartki.
+         =================================================== -->
     <div class="card" id="greeting-card">
       <h1>Happy Birthday!</h1>
-
+      
       <p class="message">
         Wishing you all the happiness and joy on your special day!
       </p>
-
+      
+      <!-- ---------------------------------------------------
+           LINKI DO AKCJI
+           ---------------------------------------------------
+           Przyciski umożliwiające:
+           - Wysłanie kartki (przenosi do sekcji #send)
+           - Udostępnienie kartki w mediach społecznościowych
+           --------------------------------------------------- -->
       <div class="card-links">
         <a href="#send" class="send-link">Send Card</a>
         <a href="#share" class="share-link">Share on Social Media</a>
       </div>
-  	</div>
-
-  <section id="send">
-    <h2>Sending your card...</h2>
-    <p>Card successfully sent to your recipient!</p>
-  </section>
-
-  <section id="share">
-    <h2>Sharing your card...</h2>
-    <p>Your card was shared on social media!</p>
-  </section>
-
+    </div>
+    
+    <!-- ===================================================
+         SEKCYJNY KOMUNIKAT: WYSLANIE KARTKI
+         ---------------------------------------------------
+         Po kliknięciu linku "Send Card" użytkownik zostaje
+         przeniesiony do tej sekcji, gdzie wyświetlana jest
+         informacja o wysłaniu kartki.
+         =================================================== -->
+    <section id="send">
+      <h2>Sending your card...</h2>
+      <p>Card successfully sent to your recipient!</p>
+    </section>
+    
+    <!-- ===================================================
+         SEKCYJNY KOMUNIKAT: UDOSTĘPNIENIE KARTKI
+         ---------------------------------------------------
+         Po kliknięciu linku "Share on Social Media" użytkownik
+         zostaje przeniesiony do tej sekcji, gdzie informacja,
+         że kartka została udostępniona, jest wyświetlana.
+         =================================================== -->
+    <section id="share">
+      <h2>Sharing your card...</h2>
+      <p>Your card was shared on social media!</p>
+    </section>
+    
   </body>
 </html>

@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <!-- ====================================================
+         META INFORMACJE I USTAWIENIA
+         ----------------------------------------------------
+         - Ustawienie kodowania (UTF-8), viewportu oraz
+           opisu strony, co wpływa na responsywność i SEO.
+         - Tytuł strony ustawiony na "Accessibility Quiz".
+         - Łączenie zewnętrznego arkusza stylów (Quiz_Page.css).
+         ==================================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
     <title>Accessibility Quiz</title>
     <link rel="stylesheet" href="Quiz_Page.css" />
-  </head>
-  <body>
+</head>
+<body>
+    <!-- ====================================================
+         NAGŁÓWEK STRONY (HEADER)
+         ----------------------------------------------------
+         - Zawiera logo freeCodeCamp wraz z alternatywnym tekstem
+           dla dostępności.
+         - Tytuł główny quizu ("HTML/CSS Quiz").
+         - Nawigację umożliwiającą skoku do sekcji:
+           Student Info, HTML oraz CSS.
+         ==================================================== -->
     <header>
       <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
       <h1>HTML/CSS Quiz</h1>
@@ -19,9 +36,19 @@
         </ul>
       </nav>
     </header>
+
+    <!-- ====================================================
+         GŁÓWNA CZĘŚĆ STRONY (MAIN)
+         ----------------------------------------------------
+         Zawiera formularz quizu, który jest podzielony na
+         kilka logicznych sekcji: Informacje o studencie,
+         pytania dotyczące HTML oraz pytania dotyczące CSS.
+         ==================================================== -->
     <main>
       <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <!-- Sekcja z informacjami o studencie -->
         <section role="region" aria-labelledby="student-info">
+          <!-- Nagłówek sekcji z atrybutem ID, by umożliwić powiązanie z aria-labelledby -->
           <h2 id="student-info">Student Info</h2>
           <div class="info">
             <label for="student-name">Name:</label>
@@ -36,10 +63,14 @@
             <input type="date" name="birth-date" id="birth-date" />
           </div>
         </section>
+
+        <!-- Sekcja z pytaniami o HTML -->
         <section role="region" aria-labelledby="html-questions">
           <h2 id="html-questions">HTML</h2>
+          <!-- Pojedynczy blok z pytaniem nr 1 -->
           <div class="question-block">
             <h3><span class="sr-only">Question</span>1</h3>
+            <!-- Użycie fieldset ułatwia grupowanie pytań i poprawia dostępność -->
             <fieldset class="question" name="html-question-one">
               <legend>
                 The legend element represents a caption for the content of its
@@ -61,6 +92,7 @@
               </ul>
             </fieldset>
           </div>
+          <!-- Pojedynczy blok z pytaniem nr 2 -->
           <div class="question-block">
             <h3><span class="sr-only">Question</span>2</h3>
             <fieldset class="question" name="html-question-two">
@@ -85,12 +117,16 @@
             </fieldset>
           </div>
         </section>
+
+        <!-- Sekcja z pytaniami o CSS -->
         <section role="region" aria-labelledby="css-questions">
           <h2 id="css-questions">CSS</h2>
           <div class="formrow">
+            <!-- Pytanie dotyczące właściwości margin -->
             <div class="question-block">
               <label for="selector">Can the CSS margin property accept negative values?</label>
             </div>
+            <!-- Lista rozwijana dla odpowiedzi -->
             <div class="answer">
               <select name="selector" id="selector" required>
                 <option value="">Select an option</option>
@@ -98,6 +134,8 @@
                 <option value="no">No</option>
               </select>
             </div>
+
+            <!-- Pytanie otwarte o CSS -->
             <div class="question-block">
               <label for="css-textarea">Do you have any questions:</label>
             </div>
@@ -106,9 +144,18 @@
             </div>
           </div>
         </section>
+
+        <!-- Przycisk wyślij -->
         <button type="submit">Send</button>
       </form>
     </main>
+
+    <!-- ====================================================
+         STOPKA STRONY (FOOTER)
+         ----------------------------------------------------
+         Zawiera dane kontaktowe, w tym adres freeCodeCamp,
+         który jest podany w formie adresu (element <address>).
+         ==================================================== -->
     <footer>
       <address>
         <a href="https://freecodecamp.org">freeCodeCamp</a><br />
@@ -117,5 +164,5 @@
         USA
       </address>
     </footer>
-  </body>
+</body>
 </html>

@@ -1,115 +1,146 @@
+/**************************************************
+ *                   BODY                       *
+ **************************************************/
 body {
-    font-family: sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    font-family: sans-serif;        /* Czcionka: bezszeryfowa */
+    background-color: #f7f7f7;        /* Jasnoszare tło dla całej strony */
+    display: flex;                  /* Użycie Flexboxa do centrowania zawartości */
+    justify-content: center;        /* Wyśrodkowanie horyzontalne */
+    align-items: center;            /* Wyśrodkowanie wertykalne */
+    min-height: 100vh;              /* Minimalna wysokość: 100% okna przeglądarki */
+    margin: 0;                      /* Usunięcie domyślnych marginesów */
 }
 
+/**************************************************
+ *                KONTAINER                     *
+ **************************************************/
 .container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px;
+    background-color: #fff;         /* Białe tło kontenera */
+    padding: 40px;                  /* Wewnętrzne odstępy */
+    border-radius: 8px;             /* Zaokrąglone rogi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+    width: 90%;                     /* Szerokość: 90% dostępnego miejsca */
+    max-width: 600px;               /* Maksymalna szerokość: 600px */
 }
 
+/**************************************************
+ *                   NAGŁÓWEK                  *
+ **************************************************/
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    text-align: center;             /* Wyśrodkowany tekst */
+    color: #333;                    /* Ciemny kolor tekstu */
+    margin-bottom: 20px;            /* Odstęp poniżej nagłówka */
 }
 
+/**************************************************
+ *                  ETYKIETY                   *
+ **************************************************/
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #555;
-    font-weight: bold;
+    display: block;                /* Wyświetlanie etykiety jako blok (cała szerokość) */
+    margin-bottom: 8px;             /* Niewielki margines poniżej etykiety */
+    color: #555;                   /* Średni odcień szarości dla tekstu */
+    font-weight: bold;             /* Pogrubiony tekst dla lepszej czytelności */
 }
 
+/**************************************************
+ *          POLA TEKSTOWE I SELECT              *
+ **************************************************/
 input[type="text"],
 input[type="email"],
 select,
 textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    width: calc(100% - 22px);       /* Szerokość dostosowana do paddingu i obramowania */
+    padding: 10px;                /* Wewnętrzny odstęp wewnątrz pola */
+    margin-bottom: 15px;          /* Odstęp między polami */
+    border: 1px solid #ccc;       /* Jasnoszare obramowanie */
+    border-radius: 4px;           /* Delikatne zaokrąglenia narożników */
+    font-size: 16px;              /* Rozmiar czcionki zapewniający komfort czytania */
 }
 
+/* Pierwsze pole z lekko zaokrąglonymi górnymi narożnikami */
 input:first-of-type {
-    border-radius: 6px 6px 0 0; /* Slightly rounded top corners for the first input */
+    border-radius: 6px 6px 0 0;     /* Zaokrąglone górne rogi */
 }
 
+/**************************************************
+ *              FOCUS - POLA FORMULARZA         *
+ **************************************************/
 input:focus,
 textarea:focus {
-    border-color: #007bff; /* Blue border on focus */
-    outline: none;
+    border-color: #007bff;        /* Niebieskie obramowanie przy aktywacji */
+    outline: none;                /* Usunięcie domyślnego konturu */
 }
 
+/**************************************************
+ *          WALIDACJA - POLA FORMULARZA         *
+ **************************************************/
 input:invalid,
 select:invalid,
 textarea:invalid {
-    border-color: red;
+    border-color: red;            /* Czerwone obramowanie przy błędnych danych */
 }
 
 input:valid,
 select:valid,
 textarea:valid {
-    border-color: green;
+    border-color: green;          /* Zielone obramowanie przy prawidłowych danych */
 }
 
+/**************************************************
+ *               GRUPA RADIO (AVAILABILITY)     *
+ **************************************************/
 .radio-group {
-    border: none;
-    padding: 0;
-    margin-bottom: 15px;
+    border: none;                 /* Brak obramowania dla grupy radio */
+    padding: 0;                   /* Brak wewnętrznych odstępów */
+    margin-bottom: 15px;          /* Margines poniżej grupy */
 }
 
 .radio-group legend {
-    color: #555;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
+    color: #555;                  /* Kolor legendy */
+    font-weight: bold;            /* Pogrubienie tekstu legendy */
+    margin-bottom: 10px;          /* Odstęp poniżej legendy */
+    display: block;               /* Wyświetlenie legendy jako blok */
 }
 
 .radio-group div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+    display: flex;                /* Użycie Flexboxa do ułożenia elementów w linii */
+    align-items: center;          /* Wyrównanie elementów w pionie */
+    margin-bottom: 5px;           /* Minimalny odstęp między elementami */
 }
 
+/* Ustawienia dla przycisków radio z niewielkim odstępem od etykiety */
 .radio-group input[type="radio"] {
     margin-right: 8px;
 }
 
+/* Stylizacja aktywnego (checked) przycisku radio */
 .radio-group input[type="radio"]:checked {
-    border: 2px solid #28a745;
-    background-color: #f0fff0;
-    box-shadow: 0 0 3px rgba(40, 167, 69, 0.5);
+    border: 2px solid #28a745;     /* Zielone obramowanie dla podkreślenia wyboru */
+    background-color: #f0fff0;      /* Jasnozielone tło */
+    box-shadow: 0 0 3px rgba(40, 167, 69, 0.5);  /* Subtelny cień wokół zaznaczenia */
 }
 
+/* Zmiana koloru etykiety przy zaznaczeniu radio */
 .radio-group input[type="radio"]:checked + label {
     color: #28a745;
     font-weight: bold;
 }
 
+/**************************************************
+ *              PRZYCISK WYŚLIJ                *
+ **************************************************/
 button[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    background-color: #007bff;      /* Niebieskie tło przycisku */
+    color: white;                   /* Biały tekst przycisku */
+    padding: 12px 20px;             /* Wewnętrzne odstępy przycisku */
+    border: none;                   /* Brak obramowania */
+    border-radius: 4px;             /* Zaokrąglenie rogów */
+    cursor: pointer;                /* Kursor zmienia się na wskazujący (ręka) */
+    font-size: 18px;                /* Większy rozmiar czcionki dla czytelności */
+    transition: background-color 0.3s ease; /* Łagodna zmiana koloru przy najechaniu */
+    width: 100%;                    /* Przycisk zajmuje całą szerokość */
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;      /* Ciemniejszy odcień niebieskiego po najechaniu */
 }

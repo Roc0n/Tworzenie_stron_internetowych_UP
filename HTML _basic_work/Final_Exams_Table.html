@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Calculus Final Exams Table</title>
+<head>
+    <!-- ================================================================
+         META INFORMACJE I KONFIGURACJA STRONY
+         ----------------------------------------------------------------
+         - Deklaracja dokumentu HTML5.
+         - Ustawienie języka na angielski.
+         - Kodowanie znaków UTF-8 zapewniające poprawne wyświetlanie treści.
+         - Tytuł strony widoczny na karcie przeglądarki.
+         ================================================================ -->
     <meta charset="UTF-8" />
-  </head>
-  <body>
+    <title>Calculus Final Exams Table</title>
+</head>
+<body>
+    <!-- ================================================================
+         TABELA WYNIKÓW EGZAMINU Z ANALIZY MATEMATYCZNEJ
+         ----------------------------------------------------------------
+         - Element <table> służy do organizacji danych dotyczących ocen.
+         - Nagłówek tabeli zawiera jej tytuł.
+         ================================================================ -->
     <table>
-      <caption>
-        Calculus Final Exam Grades
-      </caption>
+        <caption>
+            Calculus Final Exam Grades
+        </caption>
 
-      <thead>     
-        <tr>
-          <th>Last Name</th>
-          <th>First Name</th>
-          <th>Grade</th>
-        </tr>
-      </thead>
+        <!-- ================================================================
+             SEKCJA NAGŁÓWKOWA (THEAD)
+             ----------------------------------------------------------------
+             - Określa kolumny: Nazwisko, Imię i Ocena.
+             ================================================================ -->
+        <thead>     
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
 
-      <tbody>
-        <tr>
-          <td>Davis</td>
-          <td>Alex</td>
-          <td>54</td>
-        </tr>
+        <!-- ================================================================
+             SEKCJA DANYCH (TBODY)
+             ----------------------------------------------------------------
+             - Zawiera dane uczniów i ich wyniki z egzaminu.
+             ================================================================ -->
+        <tbody>
+            <tr>
+                <td>Davis</td>
+                <td>Alex</td>
+                <td>54</td>
+            </tr>
+            <tr>
+                <td>Doe</td>
+                <td>Samantha</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>Rodriguez</td>
+                <td>Marcus</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td>Thompson</td>
+                <td>Jane</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td>Williams</td>
+                <td>Natalie</td>
+                <td>83</td>
+            </tr>
+        </tbody>
 
-        <tr>
-          <td>Doe</td>
-          <td>Samantha</td>
-          <td>92</td>
-        </tr>
-
-        <tr>
-          <td>Rodriguez</td>
-          <td>Marcus</td>
-          <td>88</td>
-        </tr>
-
-        <tr>
-          <td>Thompson</td>
-          <td>Jane</td>
-          <td>77</td>
-        </tr>
-
-        <tr>
-          <td>Williams</td>
-          <td>Natalie</td>
-          <td>83</td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr>
- <td colspan="2">Average Grade</td>
-          <td>78.8</td>
-        </tr>
-      </tfoot>
+        <!-- ================================================================
+             SEKCJA PODSUMOWANIA (TFOOT)
+             ----------------------------------------------------------------
+             - Zawiera średnią ocen wszystkich uczniów.
+             - Użycie "colspan=2" pozwala na scalanie komórek w dwóch kolumnach.
+             ================================================================ -->
+        <tfoot>
+            <tr>
+                <td colspan="2">Average Grade</td>
+                <td>78.8</td>
+            </tr>
+        </tfoot>
     </table>
-  </body>
+</body>
 </html>

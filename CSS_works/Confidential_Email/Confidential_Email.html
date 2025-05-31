@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ======================================================
+         META INFORMACJE
+         ------------------------------------------------------
+         Ustawienia niezbędne dla prawidłowego działania strony:
+         - Kodowanie znaków (UTF-8)
+         - Responsywność dzięki ustawieniom viewport
+         - Tytuł strony, widoczny w zakładce przeglądarki
+         - Łączenie z zewnętrznym arkuszem stylów (CSS)
+         ====================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confidential Email</title>
@@ -8,11 +17,35 @@
 </head>
 <body>
     <main id="email">
+        <!-- ======================================================
+             TOPY I OSTRZEŻENIA
+             ------------------------------------------------------
+             Elementy wizualne podkreślające poziom tajności wiadomości:
+             - "CONFIDENTIAL": Informacja o poufności.
+             - "TOP SECRET": Oznaczenie najwyższego poziomu tajności.
+             ====================================================== -->
         <div id="confidential">CONFIDENTIAL</div>
         <div id="top-secret">TOP SECRET</div>
-        <p>This email contains <span class="blurred">sensitive information</span> and should be treated with utmost care. Do not <span class="blurred">share</span> this with unauthorized individuals.</p>
-        <p>The details discussed herein are <span class="blurred">highly classified</span> and their disclosure could lead to serious consequences. Remember our <span class="blurred">protocols</span>.</p>
-        <p>Please ensure that you are in a secure environment while reading this. After reading, follow the <span class="blurred">destruction guidelines</span> precisely. This is a <span class="blurred">critical directive</span>.</p>
+
+        <!-- ======================================================
+             TREŚĆ WIADOMOŚCI
+             ------------------------------------------------------
+             Paragrafy z treścią wiadomości:
+             - Fragmenty tekstu oznaczone klasą "blurred" mają zaaplikowane specjalne 
+               efekty CSS (np. rozmycie), by ukryć wrażliwe informacje.
+             ====================================================== -->
+        <p>
+            This email contains <span class="blurred">sensitive information</span> and should be treated with utmost care.
+            Do not <span class="blurred">share</span> this with unauthorized individuals.
+        </p>
+        <p>
+            The details discussed herein are <span class="blurred">highly classified</span> and their disclosure could 
+            lead to serious consequences. Remember our <span class="blurred">protocols</span>.
+        </p>
+        <p>
+            Please ensure that you are in a secure environment while reading this. After reading, follow the 
+            <span class="blurred">destruction guidelines</span> precisely. This is a <span class="blurred">critical directive</span>.
+        </p>
     </main>
 </body>
 </html>

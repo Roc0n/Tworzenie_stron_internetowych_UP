@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- =====================================================
+         Meta informacje o stronie
+         - Określa kodowanie znaków
+         - Ustala tytuł strony
+         - Łączy zewnętrzny arkusz stylów CSS
+       ===================================================== -->
     <meta charset="UTF-8">
     <title>fCC Cat Painting</title>
     <link rel="stylesheet" href="./Cat_painting.css">
 </head>
 <body>
     <main>
+      <!-- =====================================================
+           Sekcja główna rysunku kota ("cat-head")
+           Zawiera wszystkie elementy twarzy kota
+       ===================================================== -->
       <div class="cat-head">
+        
+        <!-- -----------------------------------------------------
+             Uszy Kota
+             - Dwie główne części: lewy i prawy uch
+             - Każdy uch zawiera wewnętrzny element dla detalu
+           ----------------------------------------------------- -->
         <div class="cat-ears">
+          <!-- Lewy uch -->
           <div class="cat-left-ear">
             <div class="cat-left-inner-ear"></div>
           </div>
+          <!-- Prawy uch -->
           <div class="cat-right-ear">
             <div class="cat-right-inner-ear"></div>
           </div>
         </div>
 
+        <!-- -----------------------------------------------------
+             Oczy Kota
+             - Dwa oczy: lewe i prawe
+             - Każde zawiera wewnętrzny element, który nadaje im głębię
+           ----------------------------------------------------- -->
         <div class="cat-eyes">
+          <!-- Lewy oko -->
           <div class="cat-left-eye">
             <div class="cat-left-inner-eye"></div>
           </div>
+          <!-- Prawe oko -->
           <div class="cat-right-eye">
             <div class="cat-right-inner-eye"></div>
           </div>
         </div>
         
+        <!-- -----------------------------------------------------
+             Nos Kota
+             - Pojedynczy, centralny element reprezentujący nos
+           ----------------------------------------------------- -->
         <div class="cat-nose"></div>
 
+        <!-- -----------------------------------------------------
+             Usta Kota
+             - Składają się z dwóch linii: lewej i prawej
+             - Tworzą kształt uśmiechu
+           ----------------------------------------------------- -->
         <div class="cat-mouth">
           <div class="cat-mouth-line-left"></div>
           <div class="cat-mouth-line-right"></div>
         </div>
 
+        <!-- -----------------------------------------------------
+             Wąsy Kota
+             - Dzielone na lewą i prawą stronę
+             - Każda strona zawiera trzy fragmenty:
+               - górny, środkowy i dolny wąs
+           ----------------------------------------------------- -->
         <div class="cat-whiskers">
+          <!-- Lewa strona wąsów -->
           <div class="cat-whiskers-left">
             <div class="cat-whisker-left-top"></div>
             <div class="cat-whisker-left-middle"></div>
             <div class="cat-whisker-left-bottom"></div>
           </div>
+          <!-- Prawa strona wąsów -->
           <div class="cat-whiskers-right">
             <div class="cat-whisker-right-top"></div>
             <div class="cat-whisker-right-middle"></div>
@@ -46,7 +88,7 @@
           </div>
         </div>
 
-      </div>
+      </div> <!-- Koniec sekcji "cat-head" -->
     </main>
 </body>
 </html>

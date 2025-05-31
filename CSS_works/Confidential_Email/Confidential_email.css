@@ -1,24 +1,37 @@
+/*************************************************
+ *              GLOBALNE STYLE                 *
+ *************************************************/
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    margin: 0;
+    font-family: sans-serif;         /* Używana czcionka: bezszeryfowa */
+    background-color: #f0f0f0;         /* Jasnoszare tło strony */
+    display: flex;                   /* Użycie Flexboxa do centrowania zawartości */
+    justify-content: center;         /* Wyśrodkowanie zawartości w poziomie */
+    align-items: flex-start;         /* Ustawienie zawartości od góry */
+    min-height: 100vh;               /* Minimalna wysokość: 100% wysokości widoku */
+    margin: 0;                       /* Usuniecie domyślnych marginesów */
 }
 
+/*************************************************
+ *             BOX EMAIL (KONTENER)            *
+ *************************************************/
 #email {
-    padding: 50px;
-    margin-top: 50px;
-    width: 500px;
-    border: 2px solid #333;
-    box-sizing: border-box;
-    position: relative;
-    background-color: #fff;
-    text-align: center;
+    padding: 50px;                   /* Wewnętrzny odstęp wokół zawartości */
+    margin-top: 50px;                /* Margines górny dla oddzielenia od krawędzi */
+    width: 500px;                    /* Stała szerokość kontenera */
+    border: 2px solid #333;          /* Obramowanie kontenera (2px, ciemny szary) */
+    box-sizing: border-box;          /* Padding i border są wliczane w szerokość */
+    position: relative;              /* Pozwala na pozycjonowanie elementów absolutnych wewnątrz */
+    background-color: #fff;          /* Białe tło dla czytelności tekstu */
+    text-align: center;              /* Wyśrodkowanie tekstu wewnątrz kontenera */
 }
 
+/*************************************************
+ *       ELEMENY OSTRZEŻENIA O TAJNOŚCI         *
+ *  (#confidential oraz #top-secret)            *
+ *************************************************/
+/* Wspólne style dla obu komunikatów: wyświetlane jako inline-block,
+   z paddingiem, marginesem, czerwonym obramowaniem przerywanym i pogrubionym tekstem.
+   Pozycjonowanie absolutne umożliwia umieszczenie elementu w wybranym miejscu kontenera. */
 #confidential, #top-secret {
     display: inline-block;
     padding: 10px 20px;
@@ -29,27 +42,37 @@ body {
     position: absolute;
 }
 
+/* Pozycjonowanie i obrót dla komunikatu "CONFIDENTIAL" */
 #confidential {
     top: 10px;
     left: 10px;
     transform: rotate(-15deg);
 }
 
+/* Pozycjonowanie i obrót dla komunikatu "TOP SECRET" */
 #top-secret {
     bottom: 10px;
     right: 10px;
     transform: rotate(15deg);
 }
 
+/*************************************************
+ *         STYLE DLA PARAGRAFÓW (p)             *
+ *************************************************/
 p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #555;
+    line-height: 1.6;                /* Wysoka odstęp między liniami dla lepszej czytelności */
+    margin-bottom: 15px;             /* Odstęp poniżej każdego paragrafu */
+    color: #555;                     /* Średnio ciemny kolor tekstu */
 }
 
+/*************************************************
+ *         EFEKT ROZMYCIA (BLURRED)              *
+ *************************************************/
+/* Klasa .blurred stosowana do wrażliwych fragmentów tekstu.
+   Efekt rozmycia wraz z dodanym tłem umożliwia częściowe ukrycie treści. */
 .blurred {
-    filter: blur(3px);
-    background-color: #ccc; /* To make blurred text slightly visible */
-    color: transparent; /* Hide the original text color */
-    padding: 0 5px; /* Add some padding around the blurred text */
+    filter: blur(3px);               /* Efekt rozmycia */
+    background-color: #ccc;          /* Jasnoszare tło dla częściowej widoczności */
+    color: transparent;              /* Ukrycie oryginalnego koloru tekstu */
+    padding: 0 5px;                  /* Odstęp wokół rozmytego tekstu */
 }

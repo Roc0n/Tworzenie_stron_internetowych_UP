@@ -1,91 +1,118 @@
+/************************************************
+ *               STYLE BODY                   *
+ ************************************************/
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f6f7;
-    text-align: center;
-    margin: 20px;
+    font-family: Arial, sans-serif;   /* Czcionka: Arial, alternatywnie dowolna czcionka bezszeryfowa */
+    background-color: #f5f6f7;          /* Jasnoszare tło strony */
+    text-align: center;                 /* Wyśrodkowanie całego tekstu */
+    margin: 20px;                       /* Margines otaczający całą zawartość */
 }
 
+/************************************************
+ *                NAGŁÓWEK H1                *
+ ************************************************/
 h1 {
-    color: #1b1b32;
+    color: #1b1b32;                    /* Kolor tekstu nagłówka: ciemny niebiesko-fioletowy */
 }
 
+/************************************************
+ *          TABELA I JEJ KOMÓRKI             *
+ ************************************************/
 table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
+    width: 80%;                        /* Tabela zajmuje 80% szerokości kontenera */
+    margin: 20px auto;                 /* Wycentrowanie tabeli i margines góra/dół 20px */
+    border-collapse: collapse;         /* Scalanie obramowań komórek w jedną linię */
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 10px;                     /* Wewnętrzny odstęp w każdej komórce */
+    border: 1px solid #ddd;            /* Obramowanie: 1px w kolorze jasnoszarym */
 }
 
 th {
-    background-color: #1b1b32;
-    color: white;
+    background-color: #1b1b32;         /* Tło nagłówków tabeli: ciemne */
+    color: white;                      /* Tekst w nagłówkach: biały dla lepszej czytelności */
 }
 
-/* Targetowanie wierszy */
+/************************************************
+ *          WIERSZE W TABELI - STATUS          *
+ ************************************************/
+/* Wiersze dla książek przeczytanych: zielony gradient */
 tr[class="read"] {
     background-image: linear-gradient(to right, #a3d9a5, #7bc47f);
 }
 
+/* Wiersze dla książek do przeczytania: ciepły, pomarańczowy gradient */
 tr[class="to-read"] {
     background-image: linear-gradient(to right, #fad4c0, #f4a261);
 }
 
+/* Wiersze dla książek w trakcie czytania: niebieski gradient */
 tr[class="in-progress"] {
     background-image: linear-gradient(to right, #c1c9e8, #7189bf);
 }
 
-/* Status */
+/************************************************
+ *           STYLE STATUSU KSIĄŻEK            *
+ ************************************************/
 .status {
-    display: inline-block;
-    padding: 5px;
-    border: 2px solid #333;
+    display: inline-block;            /* Umożliwia ustawienie wymiarów elementu */
+    padding: 5px;                     /* Odstęp wewnętrzny, by tekst nie przyklejał się do krawędzi */
+    border: 2px solid #333;           /* Domyślne obramowanie: 2px, ciemny szary */
 }
 
+/* Styl statusu dla "to-read" */
 tr[class="to-read"] .status {
     border: 2px solid #f4a261;
     background-image: linear-gradient(to right, #fad4c0, #f4a261);
 }
 
+/* Styl statusu dla "read" */
 tr[class="read"] .status {
     border: 2px solid #7bc47f;
     background-image: linear-gradient(to right, #a3d9a5, #7bc47f);
 }
 
+/* Styl statusu dla "in-progress" */
 tr[class="in-progress"] .status {
     border: 2px solid #7189bf;
     background-image: linear-gradient(to right, #c1c9e8, #7189bf);
 }
 
-/* Rate */
+/************************************************
+ *            STYLE OCEN (RATE)               *
+ ************************************************/
 .rate {
-    display: inline-block;
-    height: 30px;
-    width: 90px;
-    padding: 5px;
+    display: inline-block;            /* Wyświetlany jako element blokowy w linii */
+    height: 30px;                     /* Stała wysokość kontenera oceny */
+    width: 90px;                      /* Szerokość kontenera oceny */
+    padding: 5px;                     /* Wewnętrzny odstęp */
 }
 
+/* Pojedyncza "gwiazdka" - okrągły punkt */
 .rate span {
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 2px;
-    border-radius: 50%;
-    border: 2px solid #444;
+    display: inline-block;            /* Ustawiany jako element blokowy w linii */
+    height: 10px;                     /* Wysokość punktu */
+    width: 10px;                      /* Szerokość punktu */
+    margin: 2px;                      /* Odstęp między punktami */
+    border-radius: 50%;               /* Zaokrąglenie do pełnego koła */
+    border: 2px solid #444;           /* Obramowanie: 2px w kolorze ciemnoszarym */
 }
 
-/* Oceny */
+/************************************************
+ *            GRADIENTY OCEN                  *
+ ************************************************/
+/* Ocena "one": pierwsza gwiazdka */
 .rate[class*="one"] span:first-child {
     background-image: linear-gradient(to right, #ffcccb, #ff6347);
 }
 
+/* Ocena "two": dwie pierwsze gwiazdki */
 .rate[class*="two"] span:nth-child(-n+2) {
     background-image: linear-gradient(to right, #ffe680, #ffc107);
 }
 
+/* Ocena "three": wszystkie trzy gwiazdki */
 .rate[class*="three"] span {
     background-image: linear-gradient(to right, #90ee90, #008000);
 }

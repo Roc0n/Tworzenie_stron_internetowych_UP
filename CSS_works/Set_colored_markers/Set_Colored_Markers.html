@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <!-- ==================================================
+         META INFORMACJE I STYLIZACJA
+         --------------------------------------------------
+         - Deklaracja dokumentu jako HTML5.
+         - Ustawienie języka dokumentu na angielski.
+         - Kodowanie znaków: UTF-8 (obsługuje różne symbole i znaki).
+         - Meta viewport dla zapewnienia responsywności strony.
+         - Tytuł strony wyświetlany w zakładce przeglądarki.
+         - Łączenie zewnętrznego arkusza stylów CSS (Set_Colored_Markers_Styles.css).
+         ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colored Markers</title>
     <link rel="stylesheet" href="Set_Colored_Markers_Styles.css">
-  </head>
-  <body>
+</head>
+<body>
+    <!-- ==================================================
+         TYTUŁ STRONY
+         --------------------------------------------------
+         - Nagłówek h1 wyświetla tytuł strony "CSS Color Markers".
+         ================================================== -->
     <h1>CSS Color Markers</h1>
+
+    <!-- ==================================================
+         GŁÓWNY KONTAINER NA MARKERY
+         --------------------------------------------------
+         - Klasa "container" grupuje wszystkie markery.
+         ================================================== -->
     <div class="container">
-      <div class="marker red">
-        <div class="cap"></div>
-        <div class="sleeve"></div>
-      </div>
-      <div class="marker green">
-        <div class="cap"></div>
-        <div class="sleeve"></div>
-      </div>
-      <div class="marker blue">
-        <div class="cap"></div>
-        <div class="sleeve"></div>
-      </div>
+        <!-- ==================================================
+             MARKERY KOLORÓW
+             --------------------------------------------------
+             - Każdy marker składa się z dwóch elementów:
+               - "cap" (zakrętka)
+               - "sleeve" (obudowa)
+             - Każdy marker ma dodatkową klasę (red, green, blue),
+               co pozwala na unikalne stylizowanie w CSS.
+             ================================================== -->
+        <div class="marker red">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+        </div>
+        <div class="marker green">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+        </div>
+        <div class="marker blue">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+        </div>
     </div>
-  </body>
+</body>
 </html>

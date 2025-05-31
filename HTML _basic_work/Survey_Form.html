@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ================================================================
+         META INFORMACJE I USTAWIENIA STRONY
+         ----------------------------------------------------------------
+         - Deklaracja dokumentu HTML5.
+         - Ustawienie języka na angielski.
+         - Kodowanie znaków UTF-8 zapewnia poprawne wyświetlanie treści.
+         - Tytuł strony widoczny na karcie przeglądarki.
+         ================================================================ -->
     <meta charset="UTF-8">
     <title>Survey Form</title>
 </head>
 <body>
+    <!-- ================================================================
+         NAGŁÓWEK STRONY (TITLE & OPIS)
+         ----------------------------------------------------------------
+         - Główny tytuł formularza ankiety.
+         - Krótki opis celu ankiety.
+         ================================================================ -->
     <h1 id="title">User Experience Survey</h1>
     <p id="description">We value your feedback! Please fill out this survey to help us improve.</p>
 
+    <!-- ================================================================
+         FORMULARZ ANKIETY
+         ----------------------------------------------------------------
+         - Formularz zawiera różne pola wejściowe, w tym tekstowe,
+           listę rozwijaną, przyciski radio oraz checkboxy.
+         - Każde pole posiada przypisane ID, co ułatwia nawigację i stylizację.
+         ================================================================ -->
     <form id="survey-form">
+        <!-- Pole dla imienia -->
         <label id="name-label" for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
+        <!-- Pole dla adresu e-mail -->
         <label id="email-label" for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
+        <!-- Pole dla wieku -->
         <label id="number-label" for="number">Age:</label>
         <input type="number" id="number" name="number" placeholder="Enter your age" min="18" max="100">
 
+        <!-- Lista rozwijana z wyborem poziomu doświadczenia -->
         <label for="dropdown">Your experience level:</label>
         <select id="dropdown" name="experience">
             <option value="beginner">Beginner</option>
@@ -25,18 +50,22 @@
             <option value="expert">Expert</option>
         </select>
 
+        <!-- Preferowana metoda nauki (radio buttons) -->
         <p>Select your preferred learning method:</p>
         <input type="radio" name="method" value="videos"> Videos
         <input type="radio" name="method" value="articles"> Articles
 
+        <!-- Obszar zainteresowań (checkboxy) -->
         <p>What areas interest you?</p>
         <input type="checkbox" name="interests" value="frontend"> Frontend Development
         <input type="checkbox" name="interests" value="backend"> Backend Development
         <input type="checkbox" name="interests" value="data-science"> Data Science
 
+        <!-- Pole na dodatkowe komentarze -->
         <label for="comments">Additional Comments:</label>
         <textarea id="comments" name="comments" placeholder="Leave your comments here..."></textarea>
 
+        <!-- Przycisk wysyłania formularza -->
         <button type="submit" id="submit">Submit</button>
     </form>
 </body>

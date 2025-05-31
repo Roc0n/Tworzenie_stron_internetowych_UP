@@ -1,31 +1,61 @@
+/* =============================================================================
+   GLOBALNE STYLE DLA BODY
+   -----------------------------------------------------------------------------
+   - Czcionka: sans-serif dla czytelności.
+   - Wysokość wypełniająca cały ekran, wyśrodkowanie zawartości za pomocą Flexboxa.
+   - Neutralne tło i ciemny tekst dla odpowiedniego kontrastu.
+   - Usunięcie domyślnych marginesów dla pełnego dopasowania do ekranu.
+============================================================================= */
 body {
     font-family: sans-serif;
-    line-height: 1.7;
-    margin: 0;
-    background-color: #f8f8f8;
-    color: #333;
-    display: flex;
+    line-height: 1.7;               /* Ułatwia czytelność tekstu */
+    margin: 0;                      /* Usuwa domyślne marginesy przeglądarki */
+    background-color: #f8f8f8;      /* Jasnoszare tło strony */
+    color: #333;                    /* Ciemnoszary kolor tekstu */
+    display: flex;                  /* Flexbox dla centrowania zawartości */
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh;              /* Ustawienie strony na wysokość ekranu */
 }
 
+/* =============================================================================
+   GŁÓWNY KONTAINER (MAIN)
+   -----------------------------------------------------------------------------
+   - Białe tło dla przejrzystości.
+   - Zaokrąglone rogi dla estetycznego wyglądu.
+   - Cień dla subtelnego efektu głębi.
+   - Tekst wyśrodkowany dla lepszej czytelności.
+   - Ograniczenie szerokości dla lepszego układu na różnych ekranach.
+============================================================================= */
 #main {
     background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 40px;                   /* Wewnętrzny odstęp */
+    border-radius: 8px;               /* Zaokrąglone rogi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtelny cień */
     text-align: center;
-    max-width: 900px;
+    max-width: 900px;                 /* Maksymalna szerokość */
     width: 95%;
 }
 
+/* =============================================================================
+   TYTUŁ STRONY (H1)
+   -----------------------------------------------------------------------------
+   - Duża czcionka dla nagłówka.
+   - Odcień szarości, który dobrze komponuje się z resztą strony.
+============================================================================= */
 #title {
     font-size: 3em;
     margin-bottom: 25px;
     color: #555;
 }
 
+/* =============================================================================
+   SEKCJA OBRAZU (IMG-DIV)
+   -----------------------------------------------------------------------------
+   - Tło w jasnoszarym kolorze, aby wyróżnić obrazek.
+   - Zaokrąglone rogi dla estetyki.
+   - Padding dla odstępu wokół obrazka.
+============================================================================= */
 #img-div {
     background-color: #eee;
     padding: 20px;
@@ -33,6 +63,13 @@ body {
     border-radius: 5px;
 }
 
+/* =============================================================================
+   OBRAZEK (IMAGE)
+   -----------------------------------------------------------------------------
+   - Obrazek wyśrodkowany.
+   - Maksymalna szerokość 100%, aby dostosować się do ekranu.
+   - Zaokrąglone rogi dla łagodniejszego wyglądu.
+============================================================================= */
 #image {
     display: block;
     max-width: 100%;
@@ -41,6 +78,13 @@ body {
     border-radius: 5px;
 }
 
+/* =============================================================================
+   PODPIS OBRAZU (IMG-CAPTION)
+   -----------------------------------------------------------------------------
+   - Kursywa dla podkreślenia podpisu.
+   - Szary tekst dla delikatnego kontrastu.
+   - Drobna czcionka dla subtelnego wyglądu.
+============================================================================= */
 #img-caption {
     font-style: italic;
     color: #777;
@@ -48,11 +92,23 @@ body {
     font-size: 0.9em;
 }
 
+/* =============================================================================
+   SEKCJA INFORMACYJNA (TRIBUTE-INFO)
+   -----------------------------------------------------------------------------
+   - Lewostronne wyrównanie tekstu dla czytelności.
+   - Margines dolny dla lepszego układu.
+============================================================================= */
 #tribute-info {
     text-align: left;
     margin-bottom: 30px;
 }
 
+/* =============================================================================
+   NAGŁÓWEK W SEKCJI INFORMACYJNEJ
+   -----------------------------------------------------------------------------
+   - Szary odcień czcionki dla lepszej estetyki.
+   - Linia oddzielająca nagłówek od treści.
+============================================================================= */
 #tribute-info h2 {
     color: #555;
     margin-top: 0;
@@ -61,6 +117,12 @@ body {
     margin-bottom: 15px;
 }
 
+/* =============================================================================
+   LISTA Z FAKTAMI O MARIE CURIE
+   -----------------------------------------------------------------------------
+   - Usunięcie domyślnych wypunktowań dla czystszego wyglądu.
+   - Każdy element listy ma odstęp dla czytelności.
+============================================================================= */
 #tribute-info ul {
     list-style: none;
     padding-left: 0;
@@ -70,6 +132,13 @@ body {
     margin-bottom: 8px;
 }
 
+/* =============================================================================
+   LINK DO WIKIPEDII
+   -----------------------------------------------------------------------------
+   - Niebieski kolor linku wyróżnia go na tle strony.
+   - Pogrubienie tekstu dla podkreślenia jego znaczenia.
+   - Podkreślenie po najechaniu dla wskazania, że jest klikalny.
+============================================================================= */
 #tribute-link {
     color: #007bff;
     text-decoration: none;

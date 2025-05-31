@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ==================================================
+         META INFORMACJE I ŁĄCZENIE STYLÓW
+         --------------------------------------------------
+         - Deklaracja typu dokumentu jako HTML5.
+         - Ustawienie języka na angielski.
+         - Kodowanie znaków: UTF-8 (obsługuje większość języków).
+         - Meta viewport zapewniający responsywność strony.
+         - Tytuł strony (wyświetlany na karcie przeglądarki).
+         - Łączenie arkusza stylów CSS (Set_Colored_Boxes_styles.css).
+         ================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colorful Boxes</title>
     <link rel="stylesheet" href="Set_Colored_Boxes_styles.css">
 </head>
 <body>
+    <!-- ==================================================
+         GŁÓWNY KONTAINER NA KOLOROWE BOXY
+         --------------------------------------------------
+         - Klasa "color-grid" służy do organizacji układu
+           kolorowych boxów w siatce przy użyciu CSS.
+         ================================================== -->
     <div class="color-grid">
+        <!-- ==================================================
+             KOLOROWE BOXY
+             --------------------------------------------------
+             - Każdy div reprezentuje jeden kolorowy box.
+             - Klasa "color-box" to wspólna klasa dla stylizacji.
+             - Każdy box ma dodatkową klasę (color1, color2 itd.),
+               co umożliwia różne kolory i efekty w CSS.
+             ================================================== -->
         <div class="color-box color1"></div>
         <div class="color-box color2"></div>
         <div class="color-box color3"></div>

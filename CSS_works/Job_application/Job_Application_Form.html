@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ======================================================
+         META INFORMACJE I USTAWIENIA
+         ------------------------------------------------------
+         - Ustawienie kodowania znaków (UTF-8) dla poprawnego wyświetlania
+           wszelkich znaków.
+         - Ustawienie viewportu gwarantuje responsywność strony.
+         - Tytuł strony wyświetlany w zakładce przeglądarki.
+         - Łączenie zewnętrznego arkusza stylów (Job_Application_Form_styles.css),
+           który definiuje wygląd formularza.
+         ====================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application</title>
     <link rel="stylesheet" href="Job_Application_Form_styles.css">
 </head>
 <body>
+    <!-- ======================================================
+         KONTAINER FORMULARZA
+         ------------------------------------------------------
+         Kontener otaczający cały formularz aplikacji, który może
+         służyć do stylizacji i centrowania formularza na stronie.
+         ====================================================== -->
     <div class="container">
+        <!-- ======================================================
+             FORMULARZ APLIKACYJNY
+             ------------------------------------------------------
+             Formularz używany do składania aplikacji o pracę.
+             Zawiera następujące pola:
+             - Tytuł z zachętą do aplikowania.
+             - Pole tekstowe do wpisania imienia i nazwiska.
+             - Pole e-mail do podania adresu email.
+             - Lista rozwijana do wyboru stanowiska.
+             - Grupa opcji (radio) dotycząca dostępności (pełny etat/ niepełny).
+             - Pole tekstowe (textarea) służące do wpisania powodów, dla których
+               jesteśmy odpowiednim kandydatem.
+             - Przycisk do wysłania aplikacji.
+             ====================================================== -->
         <form action="#" method="post">
             <h1>Join Our Stellar Team!</h1>
 
+            <!-- ----------------------------------------------------
+                 PEŁNE IMIĘ I NAZWISKO
+                 ----------------------------------------------------
+                 Etykieta i pole tekstowe do wpisania pełnego imienia
+                 i nazwiska aplikanta.
+                 ---------------------------------------------------- -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
+            <!-- ----------------------------------------------------
+                 ADRES EMAIL
+                 ----------------------------------------------------
+                 Etykieta i pole formularza do wpisania adresu email.
+                 Typ "email" umożliwia walidację poprawności adresu.
+                 ---------------------------------------------------- -->
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required>
 
+            <!-- ----------------------------------------------------
+                 WYBÓR STANOWISKA
+                 ----------------------------------------------------
+                 Lista rozwijana umożliwiająca kandydatowi wybór
+                 pożądanego stanowiska. Pierwsza opcja jest nieaktywnym
+                 "placeholderem".
+                 ---------------------------------------------------- -->
             <label for="position">Desired Position:</label>
             <select id="position" name="position" required>
                 <option value="" disabled selected>Select a Position</option>
@@ -26,6 +75,13 @@
                 <option value="marketing">Marketing Specialist</option>
             </select>
 
+            <!-- ----------------------------------------------------
+                 GRUPA RADIO: DOSTĘPNOŚĆ
+                 ----------------------------------------------------
+                 Fieldset grupujący opcje dotyczące dostępności pracy.
+                 Umożliwia kandydatowi wybór między pracą na pełny etat
+                 a pracą na niepełny etat.
+                 ---------------------------------------------------- -->
             <fieldset class="radio-group">
                 <legend>Availability:</legend>
                 <div>
@@ -38,9 +94,22 @@
                 </div>
             </fieldset>
 
+            <!-- ----------------------------------------------------
+                 WIADOMOŚĆ MOTYWACYJNA
+                 ----------------------------------------------------
+                 Pole tekstowe (textarea) umożliwiające aplikantowi
+                 wyjaśnienie, dlaczego jest odpowiednim kandydatem.
+                 ---------------------------------------------------- -->
             <label for="message">Why are you a great fit?</label>
             <textarea id="message" name="message" rows="5"></textarea>
 
+            <!-- ----------------------------------------------------
+                 PRZYCISK WYŚLIJ APLIKACJĘ
+                 ----------------------------------------------------
+                 Przycisk typu submit służący do wysłania formularza.
+                 Kliknięcie powoduje przesłanie danych zgodnie z atrybutem
+                 action formularza.
+                 ---------------------------------------------------- -->
             <button type="submit">Submit Application</button>
         </form>
     </div>

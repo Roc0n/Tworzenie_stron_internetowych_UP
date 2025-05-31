@@ -1,11 +1,19 @@
+/*************************************************
+ *              GLOBALNE USTAWIENIA             *
+ *************************************************/
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;  /* Upewnia się, że padding i border są wliczane do szerokości/ wysokości */
 }
 
 body {
-  background-color: #c9d2fc;
+  background-color: #c9d2fc;  /* Ustawienie tła strony na jasnoniebieski odcień */
 }
 
+/*************************************************
+ *              KONTENER TWARZY KOTA            *
+ *************************************************/
+/* Kontener dla całego rysunku twarzy kota. Jest wycentrowany absolutnie na stronie i ma gradientowe tło,
+   przypominające futro kota, z delikatnym obramowaniem i zaokrągleniami. */
 .cat-head {
   position: absolute;
   right: 0;
@@ -20,6 +28,11 @@ body {
   border-radius: 46%;
 }
 
+/*************************************************
+ *             USZY KOTA - LEWY I PRAWY         *
+ *************************************************/
+/* Lewy uch – ustawiony poza lewym górnym rogiem kontenera, obracany o -45 stopni, 
+   tworząc efekt trójkątnego kształtu dzięki zastosowaniu obramowań. */
 .cat-left-ear {
   position: absolute;
   top: -26px;
@@ -33,6 +46,7 @@ body {
   border-bottom: 70px solid #5e5e5e;
 }
 
+/* Prawy uch – symetryczny wobec lewego, obracany o 45 stopni. */
 .cat-right-ear {
   position: absolute;
   top: -26px;
@@ -46,6 +60,10 @@ body {
   border-bottom: 70px solid #5e5e5e;
 }
 
+/*************************************************
+ *      WEWNĘTRZNE DETALE USZU (INNER EARS)      *
+ *************************************************/
+/* Lewy wewnętrzny uch – mniejszy kształt umieszczony wewnątrz lewego uszka, dodający detali */
 .cat-left-inner-ear {
   position: absolute;
   top: 22px;
@@ -59,6 +77,7 @@ body {
   border-bottom: 40px solid #3b3b4f;
 }
 
+/* Prawy wewnętrzny uch – analogicznie, dodaje głębi i szczegółowości. */
 .cat-right-inner-ear {
   position: absolute;
   top: 22px;
@@ -72,6 +91,10 @@ body {
   border-bottom: 40px solid #3b3b4f;
 }
 
+/*************************************************
+ *                OCZY KOTA                    *
+ *************************************************/
+/* Lewy oko – umieszczone wewnątrz kontenera, z lekkim obrotem, nadaje rysunkowi charakterystyczny wygląd */
 .cat-left-eye {
   position: absolute;
   top: 54px;
@@ -80,9 +103,10 @@ body {
   transform: rotate(25deg);
   width: 30px;
   height: 40px;
-  background-color: #000;
+  background-color: #000;  /* Czarny kolor symbolizuje źrenicę */
 }
 
+/* Prawe oko – podobne do lewego, lecz obrócone w przeciwną stronę */
 .cat-right-eye {
   position: absolute;
   top: 54px;
@@ -94,6 +118,10 @@ body {
   background-color: #000;
 }
 
+/*************************************************
+ *             WEWNĘTRZNE OCZY                *
+ *************************************************/
+/* Lewy wewnętrzny element oka – reprezentuje odbicie światła lub błysk w oku */
 .cat-left-inner-eye {
   position: absolute;
   top: 8px;
@@ -101,10 +129,11 @@ body {
   width: 10px;
   height: 20px;
   transform: rotate(10deg);
-  background-color: #fff;
+  background-color: #fff;  /* Biały kolor dla efektu refleksu */
   border-radius: 60%;
 }
 
+/* Prawe wewnętrzne oko – analogicznie, ale nieco przesunięte i obrócone */
 .cat-right-inner-eye {
   position: absolute;
   top: 8px;
@@ -116,6 +145,11 @@ body {
   border-radius: 60%;
 }
 
+/*************************************************
+ *                NOS KOTA                     *
+ *************************************************/
+/* Nos – wykorzystuje technikę „border trick” do stworzenia trójkątnego kształtu,
+   obracany o 180 stopni, aby ułożyć go odpowiednio w centrum twarzy. */
 .cat-nose {
   position: absolute;
   top: 108px;
@@ -129,14 +163,19 @@ body {
   border-bottom: 20px solid #442c2c;
 }
 
+/*************************************************
+ *               USTA KOTA                     *
+ *************************************************/
+/* Usta – składają się z dwóch linii, które razem tworzą kształt uśmiechu */
 .cat-mouth div {
   width: 30px;
   height: 50px;
   border: 2px solid #000;
-  border-radius: 190%/190px 150px 0 0;
+  border-radius: 190%/190px 150px 0 0;  /* Specyficzne zaokrąglenia, aby uzyskać kształt łuku */
   border-color: black transparent transparent transparent;
 }
 
+/* Lewa linia ust – ustawiona absolutnie, obracana dla uzyskania naturalnego wyglądu */
 .cat-mouth-line-left {
   position: absolute;
   top: 88px;
@@ -144,6 +183,7 @@ body {
   transform: rotate(170deg);
 }
 
+/* Prawa linia ust – analogicznie, z nieznaczną różnicą w położeniu i obrocie */
 .cat-mouth-line-right {
   position: absolute;
   top: 88px;
@@ -151,18 +191,21 @@ body {
   transform: rotate(165deg);
 }
 
-.cat-whiskers-left div {
-  width: 40px;
-  height: 1px;
-  background-color: #000;
-}
-
+/*************************************************
+ *            WĄSY KOTA - OGÓLNE              *
+ *************************************************/
+/* Wspólny styl dla wąsów – ustawia szerokość linii i kolor */
+.cat-whiskers-left div,
 .cat-whiskers-right div {
   width: 40px;
   height: 1px;
   background-color: #000;
 }
 
+/*************************************************
+ *          WĄSY LEWEJ STRONY                   *
+ *************************************************/
+/* Górny, środkowy oraz dolny wąs po lewej stronie, każdy z delikatnym obrotem */
 .cat-whisker-left-top {
   position: absolute;
   top: 120px;
@@ -184,6 +227,10 @@ body {
   transform: rotate(-3deg);
 }
 
+/*************************************************
+ *         WĄSY PRAWEJ STRONY                  *
+ *************************************************/
+/* Górny, środkowy oraz dolny wąs po prawej stronie, każdy z odpowiednim obrotem */
 .cat-whisker-right-top {
   position: absolute;
   top: 120px;
@@ -201,8 +248,3 @@ body {
 .cat-whisker-right-bottom {
   position: absolute;
   top: 134px;
-  left: 109px;
-  .bottom-right-whisker {
-  transform: rotate(3deg);
-}
-}

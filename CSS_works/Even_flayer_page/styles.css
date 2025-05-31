@@ -1,66 +1,81 @@
+/**************************************************
+ *           GLOBALNE USTAWIENIA BODY           *
+ **************************************************/
 body {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
+    padding-top: 50px;                   /* Górny odstęp od krawędzi */
+    padding-bottom: 50px;                /* Dolny odstęp od krawędzi */
+    margin-top: 0;                       /* Brak dodatkowego marginesu u góry */
+    margin-bottom: 0;                    /* Brak dodatkowego marginesu u dołu */
+    margin-left: auto;                   /* Automatyczne marginesy po bokach (centrowanie) */
     margin-right: auto;
-    width: 80vw;
-    min-height: calc(100vh - 100px);
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    width: 80vw;                         /* Szerokość: 80% widoku przeglądarki */
+    min-height: calc(100vh - 100px);       /* Minimalna wysokość = wysokość widoku minus 100px, by uwzględnić padding */
+    font-family: sans-serif;             /* Czcionka bezszeryfowa */
+    line-height: 1.6;                    /* Rozstawienie linii dla lepszej czytelności tekstu */
+    background-color: #f4f4f4;           /* Jasnoszare tło strony */
+    color: #333;                         /* Główny kolor tekstu: ciemnoszary */
 }
 
+/**************************************************
+ *                SEKCJA HEADER                 *
+ **************************************************/
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    text-align: center;
+    display: flex;                      /* Użycie Flexboxa, by łatwo centrować elementy */
+    flex-direction: column;             /* Ułożenie elementów w kolumnie (jeden pod drugim) */
+    align-items: center;                /* Wyśrodkowanie elementów w poziomie */
+    margin-bottom: 30px;                /* Odstęp poniżej nagłówka */
+    text-align: center;                 /* Wyśrodkowanie tekstu w nagłówku */
 }
 
 header img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
+    max-width: 100%;                    /* Obrazek nie przekracza szerokości kontenera */
+    height: auto;                       /* Wysokość dostosowuje się proporcjonalnie */
+    border-radius: 8px;                 /* Zaokrąglone rogi obrazka */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtelny cień, nadający głębi */
+    margin-bottom: 15px;                /* Odstęp poniżej obrazka */
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #007bff;
-    margin-top: 0;
+    font-size: 2.5em;                   /* Duży rozmiar czcionki dla tytułu */
+    color: #007bff;                     /* Intensywny niebieski kolor nagłówka */
+    margin-top: 0;                      /* Usunięcie marginesu u góry nagłówka */
 }
 
+/**************************************************
+ *               OBSZAR GŁÓWNY (MAIN)           *
+ **************************************************/
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: flex;                      /* Użycie Flexboxa, by kolumnowo rozmieszczać sekcje */
+    flex-direction: column;             /* Ułożenie sekcji jedna pod drugą */
+    gap: 40px;                          /* Odstęp między poszczególnymi sekcjami */
 }
 
+/**************************************************
+ *              SEKCJE TREŚCI (SECTION)         *
+ **************************************************/
 section {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 90%;                         /* Sekcja zajmuje 90% szerokości kontenera */
+    margin: 0 auto;                     /* Wycentrowanie sekcji */
+    padding: 20px;                      /* Wewnętrzny odstęp wewnątrz sekcji */
+    background-color: #fff;             /* Białe tło sekcji dla kontrastu z resztą strony */
+    border-radius: 8px;                 /* Zaokrąglone rogi sekcji */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Delikatny cień, nadający lekkości wyglądowi */
 }
 
 section h2 {
-    font-size: 2em;
-    color: #28a745;
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    font-size: 2em;                     /* Rozmiar czcionki nagłówka sekcji */
+    color: #28a745;                     /* Zielony kolor, przyciągający uwagę */
+    margin-top: 0;                      /* Brak dodatkowego marginesu u góry */
+    margin-bottom: 15px;                /* Odstęp poniżej nagłówka sekcji */
+    border-bottom: 2px solid #eee;      /* Delikatna linia pod nagłówkiem, oddzielająca go od treści */
+    padding-bottom: 10px;               /* Odstęp wewnętrzny poniżej nagłówka */
 }
 
+/**************************************************
+ *                ELEMENT HR                   *
+ **************************************************/
 hr {
-    width: 70%;
-    border: 1px solid #ddd;
-    margin: 20px auto;
+    width: 70%;                         /* Szerokość linii oddzielającej sekcje */
+    border: 1px solid #ddd;             /* Obramowanie dla linii, w jasnym odcieniu szarości */
+    margin: 20px auto;                  /* Odstęp nad i pod linią i wyśrodkowanie */
 }

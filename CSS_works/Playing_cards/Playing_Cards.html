@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+         =============================================
+         META INFORMACJE I USTAWIENIA
+         ---------------------------------------------
+         Ustawienia kodowania i viewportu zapewniające poprawne
+         wyświetlanie strony na różnych urządzeniach.
+         Tytuł strony oraz osadzone style CSS definiujące wygląd kart.
+         =============================================
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playing Cards</title>
     <style>
+        /* 
+           =============================================
+           KONTAINER NA KARTY
+           ---------------------------------------------
+           Ustawienia dla głównego kontenera zawierającego karty.
+           - Flexbox umożliwia rozmieszczenie kart w rzędzie,
+             z automatycznym przejściem do nowego wiersza.
+           - Gap między kartami oraz padding wewnętrzny.
+           - Tło kontenera ustawione na jasnoszary.
+           =============================================
+        */
         #playing-cards {
             display: flex;
             justify-content: center;
@@ -14,9 +34,18 @@
             background-color: #f0f0f0; 
         }
 
+        /*
+           =============================================
+           STYLE DLA POJEDYNCZEJ KARTY
+           ---------------------------------------------
+           Każda karta ma ustaloną szerokość i wysokość, 
+           zaokrąglone rogi, delikatne obramowanie i cień. 
+           Elementy w karcie są rozmieszczone w kolumnie.
+           =============================================
+        */
         .card {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Rozdziela elementy w pionie */
             width: 150px;
             height: 200px;
             border: 1px solid #ccc;
@@ -25,29 +54,57 @@
             background-color: white;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             font-size: 2em;
-            flex-direction: column; 
+            flex-direction: column; /* Ułożenie elementów wg kolumny */
         }
 
+        /*
+           =============================================
+           POZYCJONOWANIE SYMBOLI KARTY
+           ---------------------------------------------
+           Każda karta zawiera trzy sekcje:
+           - .left: umieszczony na górze po lewej stronie,
+           - .middle: wyśrodkowany symbol,
+           - .right: umieszczony na dole po prawej, obracany o 180 stopni.
+           =============================================
+        */
         .left {
-            align-self: flex-start;
+            align-self: flex-start; /* Ustawia element na początku linii (lewo) */
         }
 
         .middle {
-            align-self: center;
+            align-self: center;       /* Wyśrodkowanie elementu wzdłuż osi głównej */
             display: flex;
             flex-direction: column;
-            justify-content: center; 
-            align-items: center; 
+            justify-content: center;  /* Centrowanie w pionie */
+            align-items: center;      /* Centrowanie w poziomie */
         }
 
         .right {
-            align-self: flex-end;
-            transform: rotate(180deg); 
+            align-self: flex-end;     /* Ustawia element na końcu linii (prawo) */
+            transform: rotate(180deg); /* Obraca element o 180 stopni */
         }
     </style>
 </head>
 <body>
+    <!--
+         =============================================
+         GŁÓWNY KONTAINER NA KARTY
+         ---------------------------------------------
+         Element <main> o identyfikatorze "playing-cards" 
+         zawiera listę kart. Dzięki flex-wrap karty ułożą się
+         w kilka rzędów, jeśli nie zmieszczą się w jednym.
+         =============================================
+    -->
     <main id="playing-cards">
+        <!--
+             =============================================
+             POJEDYNCZA KARTA
+             ---------------------------------------------
+             Każda karta to <div> z klasą "card" zawierająca trzy
+             sekcje: lewą, środkową i prawą. Znaki symbolizujące
+             kolory kart (♠, ♥, ♦) są reprezentowane przez te sekcje.
+             =============================================
+        -->
         <div class="card">
             <div class="left">♠</div>
             <div class="middle">♠</div>
@@ -63,6 +120,6 @@
             <div class="middle">♦</div>
             <div class="right">♦</div>
         </div>
-        </main>
+    </main>
 </body>
 </html>

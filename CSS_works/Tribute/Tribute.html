@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ====================================================
+         META INFORMACJE I ŁĄCZENIE STYLÓW
+         ----------------------------------------------------
+         - Deklaracja dokumentu jako HTML5.
+         - Ustawienie języka na angielski.
+         - Kodowanie znaków UTF-8 dla obsługi wielu znaków.
+         - Meta viewport zapewniający responsywność na różnych urządzeniach.
+         - Tytuł strony ustawiony jako "Tribute to Marie Curie".
+         - Połączenie zewnętrznego arkusza stylów (Tribute.css).
+         ==================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tribute to Marie Curie</title>
     <link rel="stylesheet" href="Tribute.css">
 </head>
 <body>
+    <!-- ====================================================
+         GŁÓWNA SEKCJA STRONY - MAIN
+         ----------------------------------------------------
+         - Zawiera główną treść strony, w tym tytuł, obraz i informacje.
+         - ID "main" umożliwia łatwe stylizowanie i nawigację w CSS.
+         ==================================================== -->
     <main id="main">
+        <!-- ====================================================
+             TYTUŁ STRONY
+             ----------------------------------------------------
+             - Nagłówek poziomu pierwszego (h1) przedstawiający temat strony.
+             ==================================================== -->
         <h1 id="title">Marie Skłodowska-Curie</h1>
+
+        <!-- ====================================================
+             SEKCJA OBRAZU I OPISU
+             ----------------------------------------------------
+             - Zawiera zdjęcie Marie Curie oraz podpis.
+             - ID "img-div" pozwala na łatwe stylizowanie obrazka i podpisu.
+             ==================================================== -->
         <div id="img-div">
             <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Marie_Curie_c._1920s.jpg" alt="Marie Curie in her lab">
             <figcaption id="img-caption">A photograph of Marie Curie in her laboratory, surrounded by her groundbreaking work.</figcaption>
         </div>
+
+        <!-- ====================================================
+             SEKCJA INFORMACYJNA O MARIE CURIE
+             ----------------------------------------------------
+             - Zawiera tytuł, akapit informacyjny oraz listę kluczowych faktów.
+             - ID "tribute-info" pozwala na łatwe formatowanie treści.
+             ==================================================== -->
         <div id="tribute-info">
             <h2>A Pioneer in Radioactivity</h2>
             <p>Marie Skłodowska-Curie (1867-1934) was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first and only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two different scientific fields.</p>
+
+            <!-- ====================================================
+                 LISTA KLUCZOWYCH WYDARZEŃ W ŻYCIU MARIE CURIE
+                 ----------------------------------------------------
+                 - Lista przedstawia ważne osiągnięcia i wydarzenia w jej życiu.
+                 - Każdy punkt zawiera krótkie podsumowanie kluczowego faktu.
+                 ==================================================== -->
             <ul>
-                <li>Born Maria  Skłodowska in Warsaw, Congress Poland, Russian Empire.</li>
+                <li>Born Maria Skłodowska in Warsaw, Congress Poland, Russian Empire.</li>
                 <li>Studied physics and mathematics at the Sorbonne in Paris.</li>
                 <li>With her husband Pierre Curie, she investigated the phenomenon of radioactivity, a term she coined.</li>
                 <li>In 1898, they announced the discovery of two new radioactive elements: polonium (named after her native Poland) and radium.</li>
@@ -27,8 +69,16 @@
                 <li>Her work laid the foundation for modern nuclear physics and cancer therapy.</li>
                 <li>Marie Curie died on July 4, 1934, from aplastic anemia likely caused by her long-term exposure to radiation.</li>
             </ul>
+
             <p>Her dedication to science and her perseverance in the face of societal barriers made her an inspiration to generations of scientists, especially women.</p>
         </div>
+
+        <!-- ====================================================
+             LINK DO DALSZYCH INFORMACJI
+             ----------------------------------------------------
+             - Umożliwia przejście na stronę Wikipedia, aby dowiedzieć się więcej.
+             - Atrybut "target=_blank" otwiera stronę w nowej karcie.
+             ==================================================== -->
         <p>To learn more about her extraordinary life and work, visit her <a id="tribute-link" href="https://en.wikipedia.org/wiki/Marie_Curie" target="_blank">Wikipedia page</a>.</p>
     </main>
 </body>
